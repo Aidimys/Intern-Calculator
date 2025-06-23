@@ -16,7 +16,7 @@ export class OperationCommand {
           : "-" + ctx.currentInput;
         break;
       case "%":
-        ctx.currentInput = (ctx.toNumber(ctx.currentInput) / 100).toString();
+        ctx.currentInput = (parseFloat(ctx.currentInput) / 100).toString();
         break;
       case "=":
         if (ctx.operator && ctx.previousInput) {
